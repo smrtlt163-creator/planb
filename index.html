@@ -46,6 +46,19 @@
   }
   .nav-logo span { color: var(--neon-pink); text-shadow: 0 0 16px var(--neon-pink); }
 
+  .nav-social-hint {
+    font-family: var(--font-body);
+    font-size: .68rem;
+    color: var(--neon-yellow);
+    letter-spacing: .03em;
+    white-space: nowrap;
+    opacity: .9;
+  }
+  @media (max-width: 640px) {
+    .nav-social-hint { display: none; }
+  }
+
+
   .nav-links { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
   .nav-phone {
     font-weight: 700; font-size: .9rem; letter-spacing: .04em;
@@ -576,6 +589,7 @@
 <nav>
   <div class="nav-logo">Plan<span>B</span></div>
   <div class="nav-links">
+    <span class="nav-social-hint">Подпишись 👇</span>
     <div class="nav-social">
       <a href="https://max.ru/id6320091390_biz" target="_blank" title="MAX">🅜</a>
       <a href="https://wa.me/Plan_B_tlt1" target="_blank" title="WhatsApp">💬</a>
@@ -944,7 +958,7 @@
   </div>
 
   <!-- РОЛЛЫ -->
-  <div id="tab-rolls" class="menu-section">
+  <div id="tab-rolls" class="menu-section active">
   <div class="rolls-sub-wrap">
 
   <div class="rolls-sub-label" style="color:#e040fb;font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 16px; letter-spacing: .04em;">Классические роллы</div>
@@ -1189,6 +1203,38 @@
         <div class="pc-name">Мегасет «Plan B»</div>
         <div class="pc-desc">Классика с лососем + Калифорния + Филадельфия + Запечённая Калифорния + Горячая креветка + Киото жареный</div>
         <div class="pc-price">2 920 ₽</div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <img src="data:image/svg+xml;base64 PHN2ZyB2aWV3Qm94PSIwIDAgNDAwIDQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0iIzAzMWEwNSIvPjxjaXJjbGUgY3g9IjIwMCIgY3k9IjE4MCIgcj0iMTA1IiBmaWxsPSJub25lIiBzdHJva2U9IiMzOWZmMTQiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjE1Ii8+PGVsbGlwc2UgY3g9IjE1MCIgY3k9IjE3MCIgcng9IjM0IiByeT0iMzAiIGZpbGw9IiMyZDVhMWEiIG9wYWNpdHk9Ii43Ii8+PGNpcmNsZSBjeD0iMTUwIiBjeT0iMTcwIiByPSIyMiIgZmlsbD0iIzdlYzg1MCIgb3BhY2l0eT0iLjgiLz48Y2lyY2xlIGN4PSIxNTAiIGN5PSIxNzAiIHI9IjEwIiBmaWxsPSIjYzhmMGEwIiBvcGFjaXR5PSIuOCIvPjxlbGxpcHNlIGN4PSIyMjAiIGN5PSIxNTAiIHJ4PSIyOCIgcnk9IjI1IiBmaWxsPSIjMmQ1YTFhIiBvcGFjaXR5PSIuNjUiLz48Y2lyY2xlIGN4PSIyMjAiIGN5PSIxNTAiIHI9IjE4IiBmaWxsPSIjN2VjODUwIiBvcGFjaXR5PSIuNzUiLz48Y2lyY2xlIGN4PSIyMjAiIGN5PSIxNTAiIHI9IjgiIGZpbGw9IiNjOGYwYTAiIG9wYWNpdHk9Ii43NSIvPjxlbGxpcHNlIGN4PSIyNDUiIGN5PSIyMDUiIHJ4PSIyNiIgcnk9IjIzIiBmaWxsPSIjMmQ1YTFhIiBvcGFjaXR5PSIuNiIvPjxjaXJjbGUgY3g9IjI0NSIgY3k9IjIwNSIgcj0iMTYiIGZpbGw9IiNmZjZiOWQiIG9wYWNpdHk9Ii43Ii8+PGNpcmNsZSBjeD0iMjQ1IiBjeT0iMjA1IiByPSI2IiBmaWxsPSIjZmZjY2UwIiBvcGFjaXR5PSIuNyIvPjxwYXRoIGQ9Ik0xMTAgMjIwIFExMzAgMjA1IDE1NSAyMjAgUTE3NSAyMzIgMTk1IDIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzlmZjE0IiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iLjMiLz48dGV4dCB4PSIyOCIgeT0iMzIwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMzQiIGZpbGw9IiNmZmYiPtCS0LXQs9C10YLQsNGA0LjQsNC90YHQutC40Lk8L3RleHQ+PHRleHQgeD0iMjgiIHk9IjM1MiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE1IiBmaWxsPSIjYWFhIj40INGA0L7Qu9C70LAg0LHQtdC3INC80Y/RgdCwINC4INGA0YvQsdGLPC90ZXh0Pjx0ZXh0IHg9IjI4IiB5PSIzOTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zaXplPSIzMCIgZmlsbD0iI2ZmZDIzNCI+MSAyMjAg4oK9PC90ZXh0Pjwvc3ZnPg==" alt="Вегетарианский" loading="lazy">
+      <div class="pc-body">
+        <div class="pc-name">Вегетарианский</div>
+        <div class="pc-desc">Классика с огурцом ×2 + Классика с лососем + Калифорния</div>
+        <div class="pc-price">1 220 ₽</div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <img src="data:image/svg+xml;base64 PHN2ZyB2aWV3Qm94PSIwIDAgNDAwIDQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0iIzFhMGYwMCIvPjxjaXJjbGUgY3g9IjIwMCIgY3k9IjE1MCIgcj0iNDYiIGZpbGw9IiNmZmYiIG9wYWNpdHk9Ii45MiIvPjxyZWN0IHg9IjE3MCIgeT0iMTUwIiB3aWR0aD0iNjAiIGhlaWdodD0iNDAiIGZpbGw9IiNmZmYiIG9wYWNpdHk9Ii45MiIvPjxwYXRoIGQ9Ik0xNzAgMTUwIFExNzAgMTE4IDIwMCAxMTIgUTIzMCAxMTggMjMwIDE1MCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjkyIi8+PGNpcmNsZSBjeD0iMTgyIiBjeT0iMTI4IiByPSI5IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuNyIvPjxjaXJjbGUgY3g9IjIwMCIgY3k9IjExOCIgcj0iMTAiIGZpbGw9IiNmZmYiIG9wYWNpdHk9Ii44Ii8+PGNpcmNsZSBjeD0iMjE4IiBjeT0iMTI4IiByPSI5IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuNyIvPjxyZWN0IHg9IjE3MCIgeT0iMTg1IiB3aWR0aD0iNjAiIGhlaWdodD0iOCIgZmlsbD0iI2RkZCIgb3BhY2l0eT0iLjkiLz48cmVjdCB4PSIxMjAiIHk9IjIyNSIgd2lkdGg9IjM0IiBoZWlnaHQ9IjI2IiByeD0iNSIgZmlsbD0iI2M0NTgwMCIgb3BhY2l0eT0iLjg1Ii8+PHJlY3QgeD0iMTY1IiB5PSIyMjAiIHdpZHRoPSIzNiIgaGVpZ2h0PSIzMCIgcng9IjUiIGZpbGw9IiNhODQwMDAiIG9wYWNpdHk9Ii44NSIvPjxyZWN0IHg9IjIxMiIgeT0iMjI1IiB3aWR0aD0iMzQiIGhlaWdodD0iMjYiIHJ4PSI1IiBmaWxsPSIjOGIzNTAwIiBvcGFjaXR5PSIuOCIvPjxyZWN0IHg9IjI1NyIgeT0iMjI4IiB3aWR0aD0iMzAiIGhlaWdodD0iMjQiIHJ4PSI1IiBmaWxsPSIjYzQ1ODAwIiBvcGFjaXR5PSIuNzUiLz48dGV4dCB4PSIyOCIgeT0iMzAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMzQiIGZpbGw9IiNmZmYiPtCc0LjQutGBINGI0LXRhNCwPC90ZXh0Pjx0ZXh0IHg9IjI4IiB5PSIzMzIiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNSIgZmlsbD0iI2FhYSI+NCDRhNC40YDQvNC10L3QvdGL0YUg0YDQvtC70LvQsDwvdGV4dD48dGV4dCB4PSIyOCIgeT0iMzkwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMzAiIGZpbGw9IiNmZmQyMzQiPjEgODYwIOKCvTwvdGV4dD48L3N2Zz4=" alt="Микс шефа" loading="lazy">
+      <div class="pc-body">
+        <div class="pc-name">Микс шефа</div>
+        <div class="pc-desc">Токио + Херосима + Нагасаки + Тори Фурай</div>
+        <div class="pc-price">1 860 ₽</div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <img src="data:image/svg+xml;base64 PHN2ZyB2aWV3Qm94PSIwIDAgNDAwIDQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0iIzBhMDUwMCIvPjxlbGxpcHNlIGN4PSIyMDAiIGN5PSIxNzUiIHJ4PSIxMzAiIHJ5PSI3NSIgZmlsbD0iIzFhMGQwMCIgb3BhY2l0eT0iLjgiLz48Y2lyY2xlIGN4PSIxNTAiIGN5PSIxNjAiIHI9IjUiIGZpbGw9IiNmZjhjMDAiIG9wYWNpdHk9Ii44NSIvPjxjaXJjbGUgY3g9IjE2NSIgY3k9IjE1MCIgcj0iNCIgZmlsbD0iI2ZmYTUwMCIgb3BhY2l0eT0iLjgiLz48Y2lyY2xlIGN4PSIxODAiIGN5PSIxNjUiIHI9IjUiIGZpbGw9IiNmZjhjMDAiIG9wYWNpdHk9Ii44NSIvPjxjaXJjbGUgY3g9IjE5NSIgY3k9IjE0OCIgcj0iNC41IiBmaWxsPSIjZmZiMDIwIiBvcGFjaXR5PSIuODIiLz48Y2lyY2xlIGN4PSIyMTAiIGN5PSIxNjIiIHI9IjUiIGZpbGw9IiNmZjhjMDAiIG9wYWNpdHk9Ii44NSIvPjxjaXJjbGUgY3g9IjIyNSIgY3k9IjE1MCIgcj0iNCIgZmlsbD0iI2ZmYTUwMCIgb3BhY2l0eT0iLjgiLz48Y2lyY2xlIGN4PSIyNDAiIGN5PSIxNjUiIHI9IjUiIGZpbGw9IiNmZjhjMDAiIG9wYWNpdHk9Ii44NSIvPjxjaXJjbGUgY3g9IjE2MCIgY3k9IjE4NSIgcj0iNC41IiBmaWxsPSIjZmZhNTAwIiBvcGFjaXR5PSIuOCIvPjxjaXJjbGUgY3g9IjE4MCIgY3k9IjE5NSIgcj0iNSIgZmlsbD0iI2ZmOGMwMCIgb3BhY2l0eT0iLjg1Ii8+PGNpcmNsZSBjeD0iMjAwIiBjeT0iMTgyIiByPSI0IiBmaWxsPSIjZmZiMDIwIiBvcGFjaXR5PSIuODIiLz48Y2lyY2xlIGN4PSIyMjAiIGN5PSIxOTUiIHI9IjUiIGZpbGw9IiNmZjhjMDAiIG9wYWNpdHk9Ii44NSIvPjxjaXJjbGUgY3g9IjI0MCIgY3k9IjE4NSIgcj0iNC41IiBmaWxsPSIjZmZhNTAwIiBvcGFjaXR5PSIuOCIvPjxjaXJjbGUgY3g9IjIwMCIgY3k9IjE3MiIgcj0iOTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZDIzNCIgc3Ryb2tlLXdpZHRoPSIuOCIgb3BhY2l0eT0iLjIiLz48dGV4dCB4PSIyOCIgeT0iMzAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMzQiIGZpbGw9IiNmZmYiPtCY0LrQvtGA0L3Ri9C5PC90ZXh0Pjx0ZXh0IHg9IjI4IiB5PSIzMzIiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNSIgZmlsbD0iI2FhYSI+NCDQt9Cw0L/QtdGH0ZHQvdC90YvRhSDRgNC+0LvQu9CwINGBINC40LrRgNC+0Lk8L3RleHQ+PHRleHQgeD0iMjgiIHk9IjM5MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXdlaWdodD0iNzAwIiBmb250LXNpemU9IjMwIiBmaWxsPSIjZmZkMjM0Ij4xIDg3MCDigr08L3RleHQ+PC9zdmc+" alt="Икорный" loading="lazy">
+      <div class="pc-body">
+        <div class="pc-name">Икорный</div>
+        <div class="pc-desc">Запечённая Калифорния + Запечённая Филадельфия + Киото запечённый + Горячая креветка</div>
+        <div class="pc-price">1 870 ₽</div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <img src="data:image/svg+xml;base64 PHN2ZyB2aWV3Qm94PSIwIDAgNDAwIDQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0iIzBkMDAxOCIvPjxjaXJjbGUgY3g9IjIwMCIgY3k9IjE3NSIgcj0iMTE1IiBmaWxsPSJub25lIiBzdHJva2U9IiNlMDQwZmIiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuMyIvPjxjaXJjbGUgY3g9IjE0MCIgY3k9IjEzMCIgcj0iMjQiIGZpbGw9IiNmZjZiOWQiIG9wYWNpdHk9Ii44Ii8+PGNpcmNsZSBjeD0iMjAwIiBjeT0iMTE1IiByPSIyMiIgZmlsbD0iI2ZmOWY0MyIgb3BhY2l0eT0iLjg1Ii8+PGNpcmNsZSBjeD0iMjU4IiBjeT0iMTMyIiByPSIyMCIgZmlsbD0iIzdlYzhhMCIgb3BhY2l0eT0iLjgiLz48Y2lyY2xlIGN4PSIxMzAiIGN5PSIxOTUiIHI9IjIxIiBmaWxsPSIjZTA0MGZiIiBvcGFjaXR5PSIuNzUiLz48Y2lyY2xlIGN4PSIyMDAiIGN5PSIyMTAiIHI9IjIzIiBmaWxsPSIjZmZkMjM0IiBvcGFjaXR5PSIuODUiLz48Y2lyY2xlIGN4PSIyNjUiIGN5PSIxOTUiIHI9IjE5IiBmaWxsPSIjMDBlNWZmIiBvcGFjaXR5PSIuNzUiLz48dGV4dCB4PSIyOCIgeT0iMzAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMzIiIGZpbGw9IiNmZmYiPtCa0L7QvNC/0LDQvdC40Y8geDY8L3RleHQ+PHRleHQgeD0iMjgiIHk9IjMzMiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE1IiBmaWxsPSIjYWFhIj42INGA0L7Qu9C70L7QsiDQvdCwINCx0L7Qu9GM0YjRg9GOINC60L7QvNC/0LDQvdC40Y48L3RleHQ+PHRleHQgeD0iMjgiIHk9IjM5MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXdlaWdodD0iNzAwIiBmb250LXNpemU9IjMwIiBmaWxsPSIjZmZkMjM0Ij4yIDQzMCDigr08L3RleHQ+PC9zdmc+" alt="Компания x6" loading="lazy">
+      <div class="pc-body">
+        <div class="pc-name">Компания x6</div>
+        <div class="pc-desc">Классика с лососем + Классика с креветкой + Цезарь + Калифорния + Киото + Токио</div>
+        <div class="pc-price">2 430 ₽</div>
       </div>
     </div>
 
